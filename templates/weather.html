@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}" />
+
+    <style>
+        body {
+        background-image: url('{{ url_for("static", filename="static/bg.jpg") }}');
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        height: 100vh; /* Makes sure the background covers the full height */
+        margin: 0;
+        padding: 0;
+      }
+      form {
+        margin: 30px auto;
+        width: 90% !important;
+      }
+
+      form h2 {
+        margin: 20px 0px 30px 0px;
+      }
+
+      form input,
+      label {
+        margin: 5px 0px;
+      }
+      .container {
+        width: 90% !important;
+      }
+      .info {
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="container" method="post">
+      <h2><i class="bi bi-cloud-haze"></i>Weather App</h2>
+
+      <div class="form-group">
+        <label>City Name</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="City Name"
+          name="name"
+        />
+      </div>
+
+      <br />
+      <button type="submit" class="btn btn-primary">Search Now</button>
+    </form>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card text-dark bg-white mb-3" style="max-width: 20rem">
+            <div class="card-body">
+              <h1 class="card-title">{{ city_name }}</h1>
+              <div class="info">
+                <div class="right">
+                  <h3 class="card-text">{{ temp }}&deg;C</h3>
+                  <h4 class="card-text">{{ weather }}</h4>
+                </div>
+                <div class="left">
+                  &nbsp;&nbsp;
+
+                  <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="" />
+                </div>
+              </div>
+
+              <br />
+              <h5>Min Temp : {{min_temp}}&deg;C</h5>
+              <h5>Max Temp : {{max_temp}}&deg;C</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <div id="openweathermap-widget-11"></div>
+ </html> 
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+      
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+
+  <body>
+    <form method="post">
+      <h2>Weather App</h2>
+
+      <div class="form-group">
+        <label for="city-name">City Name</label>
+        <input
+          type="text"
+          id="city-name"
+          placeholder="City Name"
+          name="name"
+          required
+        />
+      </div>
+
+      <button type="submit">Search Now</button>
+    </form>
+
+    <div class="container">
+      <div class="card">
+        <h1>{{ city_name }}</h1>
+        <div class="info">
+          <div class="right">
+            <h3>{{ temp }}&deg;C</h3>
+            <h4>{{ weather }}</h4>
+          </div>
+          <div class="left">
+            <img src="http://openweathermap.org/img/w/{{ icon }}.png" alt="Weather Icon" />
+          </div>
+        </div>
+
+        <h5>Min Temp : {{ min_temp }}&deg;C</h5>
+        <h5>Max Temp : {{ max_temp }}&deg;C</h5>
+      </div>
+    </div>
+
+  </body>
+</html> -->

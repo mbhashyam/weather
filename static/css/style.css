@@ -1,0 +1,114 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #67b26f, #4ca2cd);
+  }
+  
+  /* Form Styling */
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    margin: 20px auto;
+  }
+  
+   form h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4ca2cd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #67b26f;
+  }
+  
+  /* Card Container */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .card h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    font-size: 28px;
+    color: #4ca2cd;
+  }
+  
+  .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #67b26f;
+  }
+  
+  .card img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .card h5 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .right, .left {
+    display: inline-block;
+  }
+  
+
+
